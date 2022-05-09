@@ -37,3 +37,8 @@ You can now access to API-Endpoints through
 You can use find sample requests in the `postman` folder.
 
 ## Features
+
+- [x] Discover
+- [x] Like/Pass User
+- [x] Like List
+- [x] Match List
