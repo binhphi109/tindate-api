@@ -8,6 +8,7 @@
     "clean": "rm -rf dist",
     "build": "npm run clean && npx tsc",
     "test": "jest --detectOpenHandles",
+    "seed": "npx ts-node-dev src/seeders/seed.ts",
     "lint": "eslint . --ext .ts",
     "lintfix": "eslint . --ext .ts --fix"
   },

@@ -17,5 +17,7 @@ for (let i = 0; i < 15; i++) {
 mongoose.connect().then(async () => {
   await UserModel.insertMany(items);
 
+  console.log(`inserted ${items.length} users`);
+
   mongoose.disconnect();
 });
