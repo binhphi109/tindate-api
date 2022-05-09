@@ -1,7 +1,7 @@
 version: '2.4'
 
 networks:
-  tinder-network:
+  network:
     driver: bridge
 
 x-common-variables: &common-variables
@@ -14,27 +14,27 @@ services:
       - 27017:27017
     restart: always
     networks:
-      - tinder-network
+      - network
     environment:
       MONGODB_DATABASE: tinder
       MONGODB_USERNAME: testing
       MONGODB_PASSWORD: E6aQHs56&u
       MONGODB_ROOT_USER: tinder
       MONGODB_ROOT_PASSWORD: Bq8FD74#%9
-    # logging:
-    #   driver: none
+    logging:
+      driver: none
     
-  tinder-api:
-    build: 
-      context: .
-      dockerfile: ./Dockerfile
-    ports:
-      - 80:3000
-    networks:
-      - tinder-network
-    environment: 
-      <<: *common-variables
-    command: 
-      - node
-      - "dist/server.js"
+  # tinder-api:
+  #   build: 
+  #     context: .
+  #     dockerfile: ./Dockerfile
+  #   ports:
+  #     - 80:3000
+  #   networks:
+  #     - network
+  #   environment: 
+  #     <<: *common-variables
+  #   command: 
+  #     - node
+  #     - "dist/src/server.js"
   

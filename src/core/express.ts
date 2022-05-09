@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 app.use(cookieParser());
 app.use(helmet());
-app.use(morgan("combined", { stream: new LoggerStream() }));
+app.use(morgan("short", { stream: new LoggerStream() }));
 app.use(cors());
 
 app.use(

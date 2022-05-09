@@ -10,7 +10,8 @@ export const asyncErrorHandler =
   (req, res, next) =>
     Promise.resolve(fn(req, res, next)).catch((error) => next(error));
 
-export default (): ErrorRequestHandler => (err, req, res) => {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default (): ErrorRequestHandler => (err, req, res, next) => {
   console.error(err);
 
   // we only return the reason in dev
