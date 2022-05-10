@@ -20,12 +20,9 @@ class UserService {
   }
 
   async login(): Promise<User | null> {
-    const users = await UserModel.find(
-      {
-        deleted: false,
-      },
-      "-password"
-    )
+    const users = await UserModel.find({
+      deleted: false,
+    })
       .lean()
       .exec();
 
@@ -56,12 +53,9 @@ class UserService {
   }
 
   async getAllUsers(filter?: UserFilter): Promise<User[]> {
-    const query = UserModel.find(
-      {
-        deleted: false,
-      },
-      "-password"
-    );
+    const query = UserModel.find({
+      deleted: false,
+    });
 
     if (filter?.notIds != null) {
       query.where("_id", { $nin: filter.notIds });
