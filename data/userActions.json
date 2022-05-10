@@ -1,0 +1,22 @@
+[
+  {
+    "_id": ObjectId("627a33de5a8bb0eafaff4ab0"),
+    "deleted": false,
+    "userToId": ObjectId("6279fcffa915de3cdb51e840"),
+    "userFromId": ObjectId("6279fcffa915de3cdb51e839"),
+    "type": "like",
+    "createDate": ISODate("2022-05-10T09:43:58.486Z"),
+    "editDate": ISODate("2022-05-10T09:43:58.486Z"),
+    "__v": 0
+  },
+  {
+    "_id": ObjectId("627a33e65a8bb0eafaff4ac6"),
+    "deleted": false,
+    "userToId": ObjectId("6279fcffa915de3cdb51e840"),
+    "userFromId": ObjectId("6279fcffa915de3cdb51e83d"),
+    "type": "like",
+    "createDate": ISODate("2022-05-10T09:44:06.020Z"),
+    "editDate": ISODate("2022-05-10T09:44:06.020Z"),
+    "__v": 0
+  }
+]
